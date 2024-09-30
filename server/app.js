@@ -15,12 +15,12 @@ app.use(cookieParser());
 
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your frontend origin
+    origin: 'https://tms-y3hq.vercel.app/', // Replace with your frontend origin
     credentials: true // Allow credentials (cookies) to be sent
 }));
 
 app.options('*', cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://tms-y3hq.vercel.app/',
     credentials: true
 }));
 
