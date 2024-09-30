@@ -10,7 +10,7 @@ export const Dashboard = () => {
         // Fetch the task list when the component is mounted
         const fetchTasks = async () => {
             try {
-                const response = await fetch('http://localhost:5000/tasks');
+                const response = await fetch('https://tms-eta-nine.vercel.app/tasks');
                 const data = await response.json();
                 setTasks(data);
             } catch (error) {
@@ -28,7 +28,7 @@ export const Dashboard = () => {
             return;
         }
         try {
-            const response = await fetch('http://localhost:5000/addTask', {
+            const response = await fetch('https://tms-eta-nine.vercel.app/addTask', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ taskName, taskEmail }),
@@ -54,7 +54,7 @@ export const Dashboard = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/tasks/${id}`, {
+            const response = await fetch(`https://tms-eta-nine.vercel.app/tasks/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
             });
