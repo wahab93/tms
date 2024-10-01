@@ -15,14 +15,23 @@ app.use(cookieParser());
 
 
 app.use(cors({
-    origin: 'https://tms-y3hq.vercel.app/', // Replace with your frontend origin
+    origin: '*', // Replace with your frontend origin
     credentials: true // Allow credentials (cookies) to be sent
 }));
 
 app.options('*', cors({
-    origin: 'https://tms-y3hq.vercel.app/',
+    origin: '*',
     credentials: true
 }));
+// app.use(cors({
+//     origin: 'https://tms-y3hq.vercel.app/', // Replace with your frontend origin
+//     credentials: true // Allow credentials (cookies) to be sent
+// }));
+
+// app.options('*', cors({
+//     origin: 'https://tms-y3hq.vercel.app/',
+//     credentials: true
+// }));
 
 
 // Convert data to JSON
